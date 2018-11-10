@@ -8,7 +8,7 @@ class StudentTest {
 
     @Test
     void toStringStudent() {
-        Student studentX = new Student("James","Bond",007);
-        assertEquals("James Bond (007)",studentX);
+        Student studentX = new Student("James","Bond",1007);
+        assertEquals("James Bond (1007)",studentX);
     }
 }

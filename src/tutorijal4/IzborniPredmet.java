@@ -8,7 +8,7 @@ public class IzborniPredmet extends Predmet {
     private int brojStudenata;
 
     public  IzborniPredmet(String ime, int ects){
-        setImePredmeta(ime); setEcts(ects); this.setBrojStudenata(0);
+        setImePredmeta(ime); setEcts(ects); this.setBrojStudenata(0); setListaStudenata(new Student[100]);
     }
 
     public String ispisiSpisakStudenta(){

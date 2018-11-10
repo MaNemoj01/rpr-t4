@@ -8,7 +8,7 @@ public class ObavezniPredmet extends Predmet {
     private int brojStudenata;
 
     public  ObavezniPredmet(String ime, int ects){
-        setImePredmeta(ime); setEcts(ects); this.setBrojStudenata(0);
+        setImePredmeta(ime); setEcts(ects); this.setBrojStudenata(0); setListaStudenata(new Student[100]);
     }
 
     public String ispisiSpisakStudenta(){
@@ -20,7 +20,8 @@ public class ObavezniPredmet extends Predmet {
     }
 
     public void upisiStudenta(Student student){
-        getListaStudenata()[brojStudenata++]=student;
+        getListaStudenata()[getBrojStudenata()]=student;
+        setBrojStudenata(getBrojStudenata()+1);
     }
 
     public String getImePredmeta() {
