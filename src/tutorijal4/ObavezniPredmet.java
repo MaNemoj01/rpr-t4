@@ -5,19 +5,22 @@ public class ObavezniPredmet extends Predmet {
     private String imePredmeta;
     private int ects;
     private Student[] listaStudenata;
+    private int brojStudenata;
 
     public  ObavezniPredmet(String ime, int ects){
-
+        setImePredmeta(ime); setEcts(ects); this.setBrojStudenata(0);
     }
 
     public String ispisiSpisakStudenta(){
-
-        return "";
+        String s ="";
+        for(int i=0;i<brojStudenata;i++){
+            s +=i+1 +". " + getListaStudenata()[i].toString() +"\n";
+        }
+        return s;
     }
 
     public void upisiStudenta(Student student){
-
-
+        getListaStudenata()[brojStudenata++]=student;
     }
 
     public String getImePredmeta() {
@@ -42,5 +45,13 @@ public class ObavezniPredmet extends Predmet {
 
     public void setListaStudenata(Student[] listaStudenata) {
         this.listaStudenata = listaStudenata;
+    }
+
+    public int getBrojStudenata() {
+        return brojStudenata;
+    }
+
+    public void setBrojStudenata(int brojStudenata) {
+        this.brojStudenata = brojStudenata;
     }
 }

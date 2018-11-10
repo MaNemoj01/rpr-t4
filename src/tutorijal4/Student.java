@@ -6,13 +6,12 @@ public class Student {
     private  int brojIndeksa;
 
     public  Student (String ime, String prezime, int brojIndeksa){
-
+        setIme(ime); setPrezime(prezime); setBrojIndeksa(brojIndeksa);
     }
 
     @Override
     public String toString(){
-
-        return "";
+        return getIme()+ " " + getPrezime() + " (" + getBrojIndeksa() + ")";
     }
 
     public String getIme() {
